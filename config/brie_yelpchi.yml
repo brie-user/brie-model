@@ -1,0 +1,48 @@
+# Data
+data_name: 'yelp' 
+data_dir: './data/' 
+train_ratio: 0.4
+test_ratio: 0.67
+save_dir: './pytorch_models/' #model weight and logs
+
+# Model
+model: 'BRIE'
+multi_relation: 'GNN'
+
+
+# Model architecture
+emb_size: 64
+contra_dim: 64
+thres: 0.5
+
+rho: 0.5
+
+
+seed: 262
+
+# Run multiple times with different random seeds
+# seed:
+#   - 42
+#   - 448
+#   - 39275
+#   - 29493
+#   - 262
+
+
+# hyper-parameters
+optimizer: 'adam'
+lr: 0.01
+weight_decay: 0.001
+batch_size: 1024
+num_epochs: 101
+valid_epochs: 5
+lambda_1: 2
+temperature: 0.2
+undersample: 2
+
+# Device
+no_cuda: True
+cuda_id: '0'
+
+#experiment
+save_scripts: True #whether to save main script
